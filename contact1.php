@@ -1,3 +1,4 @@
+<?php include 'sendemail.php';?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,7 +85,7 @@
                             <a href="service.html" class="nav-item nav-link">Practice</a>
                             <a href="team.html" class="nav-item nav-link">Attorneys</a>
                             <a href="blog.html" class="nav-item nav-link">Blog</a>
-                            <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                            <a href="contact1.php" class="nav-item nav-link active">Contact</a>
                         </div>
                         <a href="" class="btn btn-primary mr-3 d-none d-lg-block">Get A Quote</a>
                     </div>
@@ -158,11 +159,12 @@
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <div class="contact-form">
                         <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                        <!-- <form name="sentMessage" class="contact" action="" method="post" novalidate="novalidate">
                             <div class="form-row">
                                 <div class="col-sm-6 control-group">
                                     <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
@@ -176,11 +178,11 @@
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
-                            <div class="control-group">
+                             <div class="control-group">
                                 <input type="text" class="form-control p-4" id="subject" placeholder="Subject"
                                     required="required" data-validation-required-message="Please enter a subject" />
                                 <p class="help-block text-danger"></p>
-                            </div>
+                            </div> 
                             <div class="control-group">
                                 <textarea class="form-control p-4" rows="6" id="message" placeholder="Message"
                                     required="required"
@@ -191,7 +193,14 @@
                                 <button class="btn btn-primary btn-block" type="submit" id="sendMessageButton">Send
                                     Message</button>
                             </div>
-                        </form>
+                        </form> -->
+                        <?php echo $alert; ?>
+                        <form class="contact" method="post" id="contact-form">
+                                <input type="text" name="name" class="text-box" placeholder="Your Name" required>
+                                <input type="email" name="email" class="text-box" placeholder="Your Email" required>
+                                <textarea name="message" placeholder="Message" required></textarea>
+                                <input type="submit" name="send_request" class="send-btn" value="Send">
+                            </form>
                     </div>
                 </div>
                 <div class="col-lg-6" style="min-height: 400px;">
@@ -208,7 +217,6 @@
         </div>
     </div>
     <!-- Contact End -->
-
 
     <!-- Footer Start -->
     <div class="container-fluid bg-secondary text-white pt-5 px-sm-3 px-md-5" style="margin-top: 90px;">
@@ -329,6 +337,10 @@
 </body>
 
 </html>
+<script type="text/javascript">
+  if (window.history.replaceState) {
+     window.history.replaceState(null, null, window.location.href); }
+</script>
 <style>
     .container78 {
         display: flex;
@@ -448,4 +460,161 @@
         border-color: #9f8455;
         box-shadow: 0 0 0 0.2rem rgb(158 138 104 / 50%);
     }
+</style>
+<style>
+        .contact-section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-info {
+            color: #fff;
+            max-width: 500px;
+            line-height: 65px;
+            padding-left: 50px;
+            font-size: 18px;
+        }
+
+        .contact-info i {
+            margin-right: 20px;
+            font-size: 25px;
+        }
+
+        .contact-form {
+            max-width: 700px;
+            margin-right: 50px;
+        }
+
+        .contact-info,
+        .contact-form {
+            flex: 1;
+        }
+
+        .contact-form h2 {
+            color: #fff;
+            text-align: center;
+            font-size: 35px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .contact-form .text-box {
+            color: #000;
+            border:1px solid #ced4da;
+            width: calc(50% - 10px);
+            height: 50px;
+            padding: 12px;
+            font-size: 15px;
+            border-radius: 5px;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .contact-form .text-box:first-child {
+            margin-right: 15px;
+        }
+
+        .contact-form textarea {
+            background: #f3f3f3;
+            color: #000;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            font-size: 15px;
+            min-height: 200px;
+            max-height: 400px;
+            resize: vertical;
+            border-radius: 5px;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+      .text-box:focus{
+        box-shadow: 0 0 0 0.2rem rgba(180, 156, 115, 0.25);
+        color: #495057;
+        background-color: #fff;
+        border-color: #e0d7c6;
+        outline: 0;
+        }
+
+      textarea:focus{
+            box-shadow: 0 0 0 0.2rem rgba(180, 156, 115, 0.25);
+            color: #495057;
+            background-color: #fff;
+            border-color: #e0d7c6;
+            outline: 0;
+        }
+
+
+        .contact-form .send-btn {
+            float: left;
+            background: #B49C73;
+            color: #000;
+            border: none;
+            width: 120px;
+            height: 40px;
+            font-size: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            transition-property: background;
+        }
+
+        .contact-form .send-btn:hover {
+            background: #B49C73;
+            color:white;
+            transition:0.5s
+        }
+
+        @media screen and (max-width: 950px) {
+            .contact-section {
+                flex-direction: column;
+            }
+
+            .contact-info,
+            .contact-form {
+                margin: 30px 50px;
+            }
+
+            .contact-form h2 {
+                font-size: 30px;
+            }
+
+            .contact-form .text-box {
+                width: 100%;
+            }
+        }
+        
+
+        .alert-success {
+            z-index: 1;
+            background: #D4EDDA;
+            font-size: 18px;
+            padding: 20px 40px;
+            min-width: 420px;
+            position: fixed;
+            right: 0;
+            top: 10px;
+            border-left: 8px solid #3AD66E;
+            border-radius: 4px;
+        }
+
+        .alert-error {
+            z-index: 1;
+            background: #FFF3CD;
+            font-size: 18px;
+            padding: 20px 40px;
+            min-width: 420px;
+            position: fixed;
+            right: 0;
+            top: 10px;
+            border-left: 8px solid #FFA502;
+            border-radius: 4px;
+        }
 </style>
