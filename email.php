@@ -12,8 +12,14 @@ $mail = new PHPMailer(true);
 $alert = '';
 
 if(isset($_POST['send_request'])){
-
+  $name = $_POST['name'];
   $email = $_POST['email'];
+  $date = $_POST['date'];
+  $time = $_POST['time'];
+  $message = $_POST['message'];
+
+
+
   try {
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
@@ -27,7 +33,7 @@ if(isset($_POST['send_request'])){
 
     $mail->isHTML(true);
     $mail->Subject = 'Message Received (Contact3 Page)';
-
+    $mail->Body = "<h3>Name : $name <br>Email: $email <br>date : $date</h3> Time : $time <br> Message : $message <br>";
 
     $mail->send();
    

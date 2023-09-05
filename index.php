@@ -1,3 +1,4 @@
+<?php include 'email.php';?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
+    <title>Home | GMK Auditing</title>
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -37,7 +39,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-3 bg-secondary d-none d-lg-block">
-                <a href="index.html"
+                <a href="index.php"
                     class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
                     <h1 class="m-0 display-4 text-primary text-uppercase">GMK Auditing</h1>
                 </a>
@@ -75,7 +77,7 @@
                     </div>
                 </div>
                 <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
-                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                    <a href="index.php" class="navbar-brand d-block d-lg-none">
                         <h1 class="m-0 display-4 text-primary text-uppercase">GMK Auditing</h1>
                     </a>
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -83,10 +85,10 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="index.php" class="nav-item nav-link active">Home</a>
                             <a href="about.html" class="nav-item nav-link">About</a>
                             <a href="service.html" class="nav-item nav-link">Practice</a>
-                            <a href="team.html" class="nav-item nav-link">Attorneys</a>
+                            <a href="team.php" class="nav-item nav-link">Attorneys</a>
                             <a href="blog.html" class="nav-item nav-link">Blog</a>
                             <a href="contact1.php" class="nav-item nav-link">Contact</a>
                         </div>
@@ -233,49 +235,75 @@
                     <div class="col-lg-6 py-5">
                         <div class="rounded p-5 my-5" style="background: rgba(55, 55, 63, .7);">
                             <h1 class="text-center text-white mb-4">Get An Appointment</h1>
-                            <form>
+                            <form class="contact" method="post" id="contact-form">     
+
                                 <div class="form-group">
-                                    <input type="text" class="form-control border-0 p-4" placeholder="Your Name"
-                                        required="required" />
+                                   
+                                  <input type="text" name="name" class="form-control border-0 p-4" placeholder="Your Name" required>
+
                                 </div>
+
+
                                 <div class="form-group">
-                                    <input type="email" class="form-control border-0 p-4" placeholder="Your Email"
-                                        required="required" />
+                             
+                                       <input type="email" name="email"  class="form-control border-0 p-4" placeholder="Your Email" required>
+
                                 </div>
+
+
                                 <div class="form-row">
                                     <div class="col-6">
                                         <div class="form-group">
-                                            <div class="date" id="date" data-target-input="nearest">
-                                                <input type="text"
-                                                    class="form-control border-0 p-4 datetimepicker-input"
-                                                    placeholder="Select Date" data-target="#date"
-                                                    data-toggle="datetimepicker" />
-                                            </div>
+
+
+
+
+
+
+                                         <input type="date" name="date" class="form-control border-0 p-4" required>
+
+
+
+
+
+
+
+
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group">
-                                            <div class="time" id="time" data-target-input="nearest">
-                                                <input type="text"
-                                                    class="form-control border-0 p-4 datetimepicker-input"
-                                                    placeholder="Select Time" data-target="#time"
-                                                    data-toggle="datetimepicker" />
-                                            </div>
-                                        </div>
+
+
+
+
+
+
+
+                                                     <input type="time" name="time" class="form-control border-0 p-4" required>
+
+
+
+
+
+
+
+
+
+
+                                         </div>
                                     </div>
                                 </div>
+                                
                                 <div class="form-group">
-                                    <select class="custom-select border-0 px-4" style="height: 47px;">
-                                        <option selected>Select A Service</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 1</option>
-                                        <option value="3">Service 1</option>
-                                    </select>
+                             
+                                <textarea name="message" placeholder="Message" class="form-control border-0 p-4" required></textarea>
+
                                 </div>
-                                <div>
-                                    <button class="btn btn-primary btn-block border-0 py-3" type="submit">Get An
-                                        Appointment</button>
-                                </div>
+                                <input type="submit" name="send_request" class="send-btn" value="Get An Appointment">
+                    
+                
+
                             </form>
                         </div>
                     </div>
@@ -284,8 +312,7 @@
         </div>
     </div>
     <!-- Appointment End -->
-
-
+        
     <!-- Features Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
@@ -547,7 +574,7 @@
         </div>
         <div class="row pt-5">
             <div class="col-lg-3 col-md-6 mb-5">
-                <a href="index.html" class="navbar-brand">
+                <a href="index.php" class="navbar-brand">
                     <h1 class="m-0 mt-n2 display-4 text-primary text-uppercase">GMK Auditing</h1>
                 </a>
                 <p>Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
@@ -564,11 +591,12 @@
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="font-weight-semi-bold text-primary mb-4">Popular Links</h4>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Attorney</a>
-                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact</a>
+                    <a class="text-white mb-2" href="/index.php"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="/about.html"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white mb-2" href="/service.html"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white mb-2" href="/team.php"><i class="fa fa-angle-right mr-2"></i>Attorney</a>
+                    <a class="text-white mb-2" href="/blog.html"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                    <a class="text-white" href="/contact1.php"><i class="fa fa-angle-right mr-2"></i>Contact</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
@@ -633,3 +661,28 @@
 </body>
 
 </html>
+<style>
+
+
+.send-btn {
+            float: left;
+            background: #B49C73;
+            color: #000;
+            border: none;
+            width: 200px;
+            height: 50px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            transition-property: background;
+
+        }
+
+        .contact-form .send-btn:hover {
+            background: #B49C73;
+            color:white;
+            transition:0.5s
+        }
+</style>

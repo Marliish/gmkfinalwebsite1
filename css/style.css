@@ -8645,7 +8645,8 @@ button.bg-dark:focus {
 }
 
 .p-5 {
-  padding: 3rem !important;
+  /* padding: 3rem !important; */
+  padding: 80px;
 }
 
 .pt-5,

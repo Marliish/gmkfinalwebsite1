@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>JUSTICE - Free Lawyer Website Template</title>
+    <title>Contact | GMK Auditing</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -34,7 +34,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-3 bg-secondary d-none d-lg-block">
-                <a href="index.html"
+                <a href="index.php"
                     class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
                     <h1 class="m-0 display-4 text-primary text-uppercase">GMK Auditing</h1>
                 </a>
@@ -72,7 +72,7 @@
                     </div>
                 </div>
                 <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
-                <a href="index.html" class="navbar-brand d-block d-lg-none">
+                <a href="index.php" class="navbar-brand d-block d-lg-none">
                         <h1 class="m-0 display-4 text-primary text-uppercase">GMK Auditing</h1>
                     </a>
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -80,10 +80,10 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="index.php" class="nav-item nav-link">Home</a>
                             <a href="about.html" class="nav-item nav-link">About</a>
                             <a href="service.html" class="nav-item nav-link">Practice</a>
-                            <a href="team.html" class="nav-item nav-link">Attorneys</a>
+                            <a href="team.php" class="nav-item nav-link">Attorneys</a>
                             <a href="blog.html" class="nav-item nav-link">Blog</a>
                             <a href="contact1.php" class="nav-item nav-link active">Contact</a>
                         </div>
@@ -164,36 +164,6 @@
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <div class="contact-form">
                         <div id="success"></div>
-                        <!-- <form name="sentMessage" class="contact" action="" method="post" novalidate="novalidate">
-                            <div class="form-row">
-                                <div class="col-sm-6 control-group">
-                                    <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
-                                        required="required" data-validation-required-message="Please enter your name" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="col-sm-6 control-group">
-                                    <input type="email" class="form-control p-4" id="email" placeholder="Your Email"
-                                        required="required"
-                                        data-validation-required-message="Please enter your email" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                             <div class="control-group">
-                                <input type="text" class="form-control p-4" id="subject" placeholder="Subject"
-                                    required="required" data-validation-required-message="Please enter a subject" />
-                                <p class="help-block text-danger"></p>
-                            </div> 
-                            <div class="control-group">
-                                <textarea class="form-control p-4" rows="6" id="message" placeholder="Message"
-                                    required="required"
-                                    data-validation-required-message="Please enter your message"></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div>
-                                <button class="btn btn-primary btn-block" type="submit" id="sendMessageButton">Send
-                                    Message</button>
-                            </div>
-                        </form> -->
                         <?php echo $alert; ?>
                         <form class="contact" method="post" id="contact-form">
                                 <input type="text" name="name" class="text-box" placeholder="Your Name" required>
@@ -251,7 +221,7 @@
         </div>
         <div class="row pt-5">
             <div class="col-lg-3 col-md-6 mb-5">
-                <a href="index.html" class="navbar-brand">
+                <a href="index.php" class="navbar-brand">
                     <h1 class="m-0 mt-n2 display-4 text-primary text-uppercase">GMK Auditing</h1>
                 </a>
                 <p>Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
@@ -268,11 +238,12 @@
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="font-weight-semi-bold text-primary mb-4">Popular Links</h4>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Attorney</a>
-                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact</a>
+                    <a class="text-white mb-2" href="/index.php"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="/about.html"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white mb-2" href="/service.html"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white mb-2" href="/team.php"><i class="fa fa-angle-right mr-2"></i>Attorney</a>
+                    <a class="text-white mb-2" href="/blog.html"><i class="fa fa-angle-right mr-2"></i>Blog</a>
+                    <a class="text-white" href="/contact1.php"><i class="fa fa-angle-right mr-2"></i>Contact</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
